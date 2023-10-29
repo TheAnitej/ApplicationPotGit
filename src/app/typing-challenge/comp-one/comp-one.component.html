@@ -1,0 +1,123 @@
+<p>{{timeLeft}} Seconds </p>
+
+
+<mat-card class="container-box">
+
+
+  <mat-card-content class="text">
+    <span [class]="checkValidity(i)" *ngFor="let letter of randomStrings.split(''); let i = index">{{letter}}</span>
+  </mat-card-content>
+
+
+  <!-- <mat-card-actions>
+    <button mat-button (click)="refresh()">Refresh</button>
+  </mat-card-actions> -->
+</mat-card>
+
+
+<div class="container-box">
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Enter above Text</mat-label>
+    <input matInput type="text" [(ngModel)]="value" (input)="valueChanged($event)">
+    
+  </mat-form-field>
+  <button mat-button (click)="refresh()">Refresh</button>
+</div>
+
+<div class="body">
+  <div class="keyboard">
+    <ul class="row">
+      <li class="notkey" ></li>
+      <li> <span [class]="keyToClick(0)">1</span></li>
+      <li> <span [class]="keyToClick(1)">2</span></li>
+      <li> <span [class]="keyToClick(2)">3</span></li>
+      <li> <span [class]="keyToClick(3)">4</span></li>
+      <li> <span [class]="keyToClick(4)">5</span></li>
+      <li> <span [class]="keyToClick(5)">6</span></li>
+      <li> <span [class]="keyToClick(6)">7</span></li>
+      <li> <span [class]="keyToClick(7)">8</span></li>
+      <li> <span [class]="keyToClick(8)">9</span></li>
+      <li> <span [class]="keyToClick(9)">0</span></li>
+      <li> <span [class]="keyToClick(10)">_</span></li>
+      <li> <span [class]="keyToClick(11)">=</span></li>
+      <li><span [class]="isDelete()">Delete</span></li>
+    </ul>
+    <ul class="row">
+      <li class="notkey" ></li>
+      <li> <span [class]="keyToClick(12)">Q</span></li>
+      <li> <span [class]="keyToClick(13)">W</span></li>
+      <li> <span [class]="keyToClick(14)">E</span></li>
+      <li> <span [class]="keyToClick(15)">R</span></li>
+      <li> <span [class]="keyToClick(16)">T</span></li>
+      <li> <span [class]="keyToClick(17)">Y</span></li>
+      <li> <span [class]="keyToClick(18)">U</span></li>
+      <li> <span [class]="keyToClick(19)">I</span></li>
+      <li> <span [class]="keyToClick(20)">O</span></li>
+      <li> <span [class]="keyToClick(21)">P</span></li>
+      <li> <span [class]="keyToClick(22)">{{openbracket}}</span></li>
+      <li> <span [class]="keyToClick(23)">{{closedbracket}}</span></li>
+      <li> <span [class]="keyToClick(24)">{{forwardSlash}}</span></li>
+    </ul>
+    <ul class="row">
+      <li class="notkey caps"> </li>
+      <li > <span [class]="keyToClick(25)">A</span></li>
+      <li> <span [class]="keyToClick(26)">S</span></li>
+      <li> <span [class]="keyToClick(27)">D</span></li>
+      <li> <span [class]="keyToClick(28)">F</span></li>
+      <li> <span [class]="keyToClick(29)">G</span></li>
+      <li> <span [class]="keyToClick(30)">H</span></li>
+      <li> <span [class]="keyToClick(31)">J</span></li>
+      <li> <span [class]="keyToClick(32)">K</span></li>
+      <li> <span [class]="keyToClick(33)">L</span></li>
+      <li> <span [class]="keyToClick(34)">;</span></li>
+      <li> <span [class]="keyToClick(35)">'</span></li>
+      <li class="notkey" id="enter"></li>
+    </ul>
+  
+    <ul class="row">
+      <li class="notkey"></li>
+      <li class="shift"><span [class]="isUppercase()">Shift</span></li>
+      <li> <span [class]="keyToClick(36)">Z</span></li>
+      <li> <span [class]="keyToClick(37)">X</span></li>
+      <li> <span [class]="keyToClick(38)">C</span></li>
+      <li> <span [class]="keyToClick(39)">V</span></li>
+      <li> <span [class]="keyToClick(40)">B</span></li>
+      <li> <span [class]="keyToClick(41)">N</span></li>
+      <li> <span [class]="keyToClick(42)">M</span></li>
+      <li> <span [class]="keyToClick(43)">,</span></li>
+      <li> <span [class]="keyToClick(44)">.</span></li>
+      <li> <span [class]="keyToClick(45)">?</span></li>
+      <li class="notkey " id="shift2"></li>
+      <li class="notkey " id="up-arrow"></li>
+    </ul>
+  
+    <ul class="row">
+      <li class="notkey" id="ctrl"></li>
+      <li class="notkey" id="fn"></li>
+      <li class="notkey" id="win"></li>
+      <li class="notkey" id="alt"></li>
+      <li> <span [class]="keyToClick(46)">Space</span></li>
+      <li class="notkey" id="altgr"></li>
+      <li class="notkey" id="menu"></li>
+      <li class="notkey" id="ctrl2"></li>
+      <li class="notkey" id="left-arrow"></li>
+      <li class="notkey" id="down-arrow"></li>
+    </ul>
+  </div>
+</div>
+
+<app-hands [one]="(fingerOne.includes(randomStrings[value.length]) || isUppercase()==='key clay type' ) && isDelete()!=='key clay type'" 
+[two]="(fingerTwo.includes(randomStrings[value.length].toUpperCase()) || (isUppercase()==='key clay type' && fingerOne.includes(randomStrings[value.length]) )) && isDelete()!=='key clay type'"  
+[three]="fingerThree.includes(randomStrings[value.length].toUpperCase()) && isDelete()!=='key clay type'" 
+[four]="fingerFour.includes(randomStrings[value.length].toUpperCase()) && isDelete()!=='key clay type'" 
+[five]="fingerFive.includes(randomStrings[value.length]) && isDelete()!=='key clay type'" 
+[six]="fingerSix.includes(randomStrings[value.length]) && isDelete()!=='key clay type'" 
+[seven]="fingerSeven.includes(randomStrings[value.length].toUpperCase()) && isDelete()!=='key clay type'" 
+[eight]="fingerEight.includes(randomStrings[value.length].toUpperCase()) && isDelete()!=='key clay type'" 
+[nine]="fingerNine.includes(randomStrings[value.length].toUpperCase()) && isDelete()!=='key clay type'" 
+[ten]="fingerTen.includes(randomStrings[value.length].toUpperCase()) || isDelete()==='key clay type'" 
+
+
+
+></app-hands>

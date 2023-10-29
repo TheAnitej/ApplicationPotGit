@@ -1,0 +1,236 @@
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    /* background-color: white; */
+}
+/* 
+.right-hand {
+    margin-right: 300px;
+    width: 200px;
+    height: 220px;
+    left: 0px;
+    background-color: #f9be99;
+    border-radius: 20px 20px 100px 100px;
+    position: absolute;
+
+    
+} */
+
+.right-hand {
+    /* margin-right: 200px; */
+    width: 210px;
+    height: 230px;
+    left: 0px;
+    background-color: #f9be99;
+    border-radius: 0 0 100px 100px;
+    border-radius: 20px 20px 100px 100px;
+    position: absolute;
+}
+
+
+.left-hand {
+    margin-left: 80%;
+    width: 210px;
+    height: 230px;
+    right: 0px;
+    background-color: #f9be99;
+    border-radius: 0 0 100px 100px;
+    position: relative;
+}
+
+.nail {
+    width: 30px;
+    height: 20px;
+    top: 3px;
+    background-color: rgba(255, 255, 255, 0.826);
+    position: absolute;
+    bottom: 165px;
+    border-radius: 10px;
+}
+
+.left-nail {
+    width: 30px;
+    height: 20px;
+    bottom: 4px;
+    background-color: white;
+    position: absolute;
+    border-radius: 10px;
+}
+
+
+
+
+.right-finger {
+
+    width: 40px;
+    height: 190px;
+    background-color: #f9be99;
+    position: absolute;
+    bottom: 130px;
+    border-radius: 15px;
+    transition: 0.1s;
+
+}
+
+.right-finger:nth-child(1) {
+    left: 0px;
+}
+
+.right-finger:nth-child(1).select {
+    left: 0px;
+    background-color: #f9be99;
+    height: 100px;
+    width: 45px;
+    bottom: 140px;
+}
+
+.right-finger:nth-child(2) {
+    left: 55px;
+    height: 220px;
+    width: 45px;
+    
+}
+
+.right-finger:nth-child(2).select {
+    left: 55px;
+    height: 120px;
+    width: 45px;
+}
+
+.right-finger:nth-child(3) {
+    left: 110px;
+    height: 240px;
+    width: 45px;
+}
+
+.right-finger:nth-child(3).select {
+    left: 110px;
+    height: 120px;
+    width: 45px;
+
+}
+
+.right-finger:nth-child(4) {
+    left: 170px;
+    height: 215px;
+    width: 45px;
+}
+
+.right-finger:nth-child(4).select {
+    left: 170px;
+    height: 150px;
+    width: 45px;
+}
+
+.right-finger:nth-child(5) {
+    left: 80px;
+    bottom: 170px;
+    width: 60px;
+    height: 190px;
+    transform: rotate(50deg) translateX(180px);
+    border-radius: 25px;
+
+}
+
+.right-finger:nth-child(5).select {
+    left: 80px;
+    bottom: 200px;
+    width: 60px;
+    height: 110px;
+
+}
+
+
+.nail.selected{
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.left-nail.selected{
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.left-finger {
+
+    width: 40px;
+    height: 190px;
+    background-color: #f9be99;
+    position: absolute;
+    bottom: 130px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+
+.left-finger:nth-child(1) {
+
+    left: 80px;
+    border-radius: 25px;
+    transform: rotate(130deg) translateX(180px);
+    bottom: 170px;
+    width: 60px;
+    height: 190px;
+}
+
+.left-finger:nth-child(2).select {
+    background-color: #f9be99;
+    left: 0px;
+    height: 110px;
+    width: 45px;
+}
+
+.left-finger:nth-child(2) {
+    left: 0px;
+    height: 205px;
+    width: 45px;
+    bottom: 150px;
+}
+
+.left-finger:nth-child(3) {
+    
+    left: 55px;
+    height: 240px;
+    width: 45px;
+}
+
+.left-finger:nth-child(3).select {
+    background-color: #f9be99;
+    left: 55px;
+    height: 145px;
+    width: 45px;
+}
+
+.left-finger:nth-child(4) {
+    left: 110px;
+    height: 220px;
+    width: 45px;
+}
+
+.left-finger:nth-child(4).select {
+    left: 110px;
+    height: 120px;
+    width: 45px;
+    background-color: #f9be99;
+}
+
+.left-finger:nth-child(5) {
+    left: 170px;
+    /* height: 120px; */
+}
+
+.left-finger:nth-child(5).select {
+    left: 170px;
+    height: 100px;
+    width: 40px;
+    bottom: 140px;
+    background-color: #f9be99;
+}
+
+/* .left-finger:hover {
+    background-color: blue;
+} */
+
+.select{
+    background-color: #f9be99;
+}

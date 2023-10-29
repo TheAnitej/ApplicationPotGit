@@ -1,0 +1,218 @@
+.container-box{
+    font-family: arial;
+    font-size: 22px;
+    margin: 30px;
+ 
+}
+
+.example-form {
+    min-width: 100px;
+    max-width: 200px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 80%;
+  }
+  
+.correct{
+    color: green;
+}
+
+.incorrect{
+    color: red;
+}
+
+.pending{
+    color: rgba(0, 0, 0, 0.717);
+}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;600&display=swap');
+body{
+  background:blue;
+  overflow:hidden;
+  height:40vh;
+  font-family: 'Montserrat', sans-serif;
+  font-weight:600;
+  display: flex;
+  flex-direction:column; 
+  justify-content:flex-end;
+  align-items:center;
+}
+
+.keyboard{
+  width: 60%;
+  height: 30%;
+  position: absolute;
+  background: rgba(128, 128, 128, 0.205);
+  left: 50%;
+  top:80%;
+  transform: translate(-50%,-50%);
+}
+.row{
+  padding:0;
+  list-style-type:none;
+  display:flex;
+  justify-content: space-evenly;
+}
+
+.row div{
+  display: flex;
+}
+.key{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:50px;
+    height:40px;
+    border-radius: 40%;
+    --clay-background: black;
+    /* --clay-border-radius: 15px; */
+   }
+   .notkey{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    --clay-background: black;
+    --clay-border-radius: 15px;
+   }
+.key:hover{
+  cursor:pointer;
+  transition:.7s;
+  /* background: rgba(128, 128, 128, 0.438);
+  --clay-background: black;
+  --clay-shadow-inset-primary: 0 0 5px 5px black; */
+}
+
+.uppercase{
+    cursor:pointer;
+    transition:.7s;
+    background: rgba(128, 128, 128, 0.438);
+}
+.type{
+    cursor:pointer;
+    transition:.7s;
+    background: rgba(128, 128, 128, 0.438);
+  }
+
+#esc{
+  width: 28px;
+  --clay-border-radius:10px;
+  background: palegreen;
+  --clay-background:palegreen;
+}
+#esc:hover{
+    --clay-shadow-inset-primary: 0 0 5px 5px	lightgreen;
+}
+#del{
+  width: 60px;
+  /* background: #AFEEEE;
+  --clay-background:#AFEEEE; */
+}
+#del:hover{
+    background: rgba(128, 128, 128, 0.438);
+}
+#tab{
+  width:56px;
+  background: #FF7F50;
+  --clay-background:#FF7F50
+}
+#tab:hover{
+ --clay-shadow-inset-primary: 0 0 5px 5px	indianred;
+}
+.caps{
+  width: 60px;
+  --clay-background: #00dbff;
+}
+#caps:hover{
+   --clay-shadow-inset-primary: 0 0 5px 5px	#10A5F5;
+}
+#enter{
+  width: 64px;
+  --clay-background: 	#40E0D0;
+}
+#enter:hover{
+  --clay-shadow-inset-primary: 0 0 5px 5px		#00CED1;
+}
+#slash{
+  width: 48px;
+}
+.shift{
+  width:100px;
+  /* align-items: flex-end; */
+  right: 10%;
+  text-align-last: right;
+  --clay-background: 	#6495ED;
+}
+#shift:hover{
+  --clay-shadow-inset-primary: 0 0 5px 5px #527fd1;
+}
+#shift2{
+  width:100px;
+  --clay-background: #87CEFA;
+}
+#shift2:hover{
+    --clay-shadow-inset-primary: 0 0 5px 5px #79bde8;
+}
+#ctrl{
+  --clay-background:#DC143C;
+}
+#ctrl:hover{
+  --clay-shadow-inset-primary: 0 0 5px 5px #ba1133;
+}
+#fn{
+  --clay-background: orange;
+}
+#fn:hover{
+  --clay-shadow-inset-primary: 0 0 5px 5px darkorange;
+}
+#win{
+  --clay-background: mediumpurple;
+}
+#win:hover{
+ --clay-shadow-inset-primary: 0 0 5px 5px slateblue;
+}
+#alt{
+  --clay-background: #778899;
+}
+#alt:hover{
+   --clay-shadow-inset-primary: 0 0 5px 5px 	#708090;
+}
+#space{
+  width: 240px;
+  --clay-background: url("https://i.ibb.co/9qLH1SB/constellation-pattern.jpg");
+  background-size: cover;
+  filter: brightness(200%);
+}
+#space:hover{
+  filter: brightness(80%);
+}
+#altgr{
+  --clay-background: black;
+}
+#altgr:hover{
+  --clay-shadow-inset-primary: 0 0 5px 5px black;
+}
+#menu{
+  --clay-background: red;
+}
+#menu:hover{
+    --clay-shadow-inset-primary: 0 0 5px 5px #d90000;
+}
+#ctrl2{
+  --clay-background: chocolate;
+}
+#ctrl2:hover{
+  --clay-shadow-inset-primary: 0 0 5px 5px sienna;
+}
+
+.text{
+    font-size: 20px;
+}
+
+
