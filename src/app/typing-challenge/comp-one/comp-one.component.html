@@ -3,15 +3,10 @@
 
 <mat-card class="container-box">
 
-
   <mat-card-content class="text">
     <span [class]="checkValidity(i)" *ngFor="let letter of randomStrings.split(''); let i = index">{{letter}}</span>
   </mat-card-content>
 
-
-  <!-- <mat-card-actions>
-    <button mat-button (click)="refresh()">Refresh</button>
-  </mat-card-actions> -->
 </mat-card>
 
 
